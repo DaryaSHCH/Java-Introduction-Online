@@ -16,7 +16,7 @@ public class TaskSixth {
 		System.out.println("N>>");
 		while (!scan.hasNextInt()) {
 			String s = scan.nextLine();
-			System.out.println("Ââåäèòå ÷èñëî>> ");
+			System.out.println("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾>> ");
 		}
 		lengthN = scan.nextInt();
 		while (lengthN <= 0) {
@@ -34,7 +34,7 @@ public class TaskSixth {
 				sumElements += array[i];
 			}
 		}
-		System.out.println("Cóììà ÷èñåë, ÷üè ïîðÿäêîâûå íîìåðà ÿâëÿþòñÿ ïðîñòûìè ÷èñëàìè ðàâíà:  " + sumElements);
+		System.out.println("CÑƒÐ¼Ð¼Ð° Ñ‡Ð¸ÑÐµÐ», Ñ‡ÑŒÐ¸ Ð¿Ð¾Ñ€ÑÐ´ÐºÐ¾Ð²Ñ‹Ðµ Ð½Ð¾Ð¼ÐµÑ€Ð° ÑÐ²Ð»ÑÑŽÑ‚ÑÑ Ð¿Ñ€Ð¾ÑÑ‚Ñ‹Ð¼Ð¸ Ñ‡Ð¸ÑÐ»Ð°Ð¼Ð¸ Ñ€Ð°Ð²Ð½Ð°:  " + sumElements);
 
 	}
 }

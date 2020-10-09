@@ -46,7 +46,7 @@ public class TaskFifth {
 	public static void checkNumber(Scanner scan) {
 		while (!scan.hasNextInt()) {
 			String line = scan.nextLine();
-			System.out.println("Введите число: ");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 		}
 	}
 }

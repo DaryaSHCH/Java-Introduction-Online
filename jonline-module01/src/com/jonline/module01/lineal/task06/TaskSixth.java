@@ -14,12 +14,12 @@ public class TaskSixth {
 		int x;
 		int y;
 		
-		System.out.println("Введите значение для х: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ С…: ");
 
 		checkNumber(scan);
 		x = scan.nextInt();
 
-		System.out.println("Введите значение для y: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ y: ");
 		checkNumber(scan);
 		y = scan.nextInt();
 
@@ -30,7 +30,7 @@ public class TaskSixth {
 	public static void checkNumber(Scanner scan) {
 		while (!scan.hasNextInt()) {
 			String line = scan.nextLine();
-			System.out.println("Введите число: ");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 		}
 	}
 

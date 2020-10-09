@@ -17,46 +17,46 @@ public class TaskFourth {
 		int brickLength;
 		int brickHeight;
 
-		System.out.println("Введите значение для А: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ Рђ: ");
 
 		checkNumber(scan);
 		targetWidth = scan.nextInt();
 
-		System.out.println("Введите значение для B: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ B: ");
 
 		checkNumber(scan);
 		targetLength = scan.nextInt();
 
-		System.out.println("Введите значение для x: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ x: ");
 
 		checkNumber(scan);
 		brickWidth = scan.nextInt();
 
-		System.out.println("Введите значение для y: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ y: ");
 
 		checkNumber(scan);
 		brickLength = scan.nextInt();
 
-		System.out.println("Введите значение для z: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ z: ");
 
 		checkNumber(scan);
 		brickHeight = scan.nextInt();
 
 		if (brickWidth <= targetWidth && brickLength <= targetLength) {
-			System.out.println("Кирпич  проходит через отверстие");
+			System.out.println("РљРёСЂРїРёС‡  РїСЂРѕС…РѕРґРёС‚ С‡РµСЂРµР· РѕС‚РІРµСЂСЃС‚РёРµ");
 		} else if (brickHeight <= targetWidth && brickWidth <= targetLength) {
-			System.out.println("Кирпич  проходит через отверстие");
+			System.out.println("РљРёСЂРїРёС‡  РїСЂРѕС…РѕРґРёС‚ С‡РµСЂРµР· РѕС‚РІРµСЂСЃС‚РёРµ");
 		} else if (brickHeight <= targetWidth && brickLength <= targetLength) {
-			System.out.println("Кирпич  проходит через отверстие");
+			System.out.println("РљРёСЂРїРёС‡  РїСЂРѕС…РѕРґРёС‚ С‡РµСЂРµР· РѕС‚РІРµСЂСЃС‚РёРµ");
 		} else {
-			System.out.println("Кирпич  не проходит через отверстие");
+			System.out.println("РљРёСЂРїРёС‡  РЅРµ РїСЂРѕС…РѕРґРёС‚ С‡РµСЂРµР· РѕС‚РІРµСЂСЃС‚РёРµ");
 		}
 	}
 
 	public static void checkNumber(Scanner scan) {
 		while (!scan.hasNextInt()) {
 			String line = scan.nextLine();
-			System.out.println("Введите число: ");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 		}
 	}
 }

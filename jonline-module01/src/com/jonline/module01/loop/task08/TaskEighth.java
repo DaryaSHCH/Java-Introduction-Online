@@ -3,7 +3,7 @@ package com.jonline.module01.loop.task08;
 import java.util.Scanner;
 
 /*
- * Даны 2 числа. Определить цифры входящие как в первое, так и во второе число;
+ * Р”Р°РЅС‹ 2 С‡РёСЃР»Р°. РћРїСЂРµРґРµР»РёС‚СЊ С†РёС„СЂС‹ РІС…РѕРґСЏС‰РёРµ РєР°Рє РІ РїРµСЂРІРѕРµ, С‚Р°Рє Рё РІРѕ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ;
  */
 public class TaskEighth {
 	public static void main(String[] args) {
@@ -14,13 +14,13 @@ public class TaskEighth {
 		String secondString;
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("Введите число: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 
 		checkLine(scan);
 
 		firstNumber = scan.nextInt();
 
-		System.out.println("Введите число: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 
 		checkLine(scan);
 
@@ -33,7 +33,7 @@ public class TaskEighth {
 				Character firstChar = firstString.charAt(i);
 				for (int j = 0; j < secondString.length(); j++) {
 					if (firstChar == secondString.charAt(j)) {
-						System.out.println(firstChar + " содержится и в первом и во втором числе ");
+						System.out.println(firstChar + " СЃРѕРґРµСЂР¶РёС‚СЃСЏ Рё РІ РїРµСЂРІРѕРј Рё РІРѕ РІС‚РѕСЂРѕРј С‡РёСЃР»Рµ ");
 					}
 				}
 			}
@@ -43,7 +43,7 @@ public class TaskEighth {
 	public static void checkLine(Scanner scan) {
 		while (!scan.hasNextInt()) {
 			String line = scan.nextLine();
-			System.out.println("Введите число: ");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 		}
 	}
 

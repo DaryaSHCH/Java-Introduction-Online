@@ -3,7 +3,7 @@ package com.jonline.module01.loop.task07;
 import java.util.Scanner;
 
 /*
- * Для каждого натурального числа в промежутке от m до n вывести все делители, кроме единицы и самого числа;
+ * Р”Р»СЏ РєР°Р¶РґРѕРіРѕ РЅР°С‚СѓСЂР°Р»СЊРЅРѕРіРѕ С‡РёСЃР»Р° РІ РїСЂРѕРјРµР¶СѓС‚РєРµ РѕС‚ m РґРѕ n РІС‹РІРµСЃС‚Рё РІСЃРµ РґРµР»РёС‚РµР»Рё, РєСЂРѕРјРµ РµРґРёРЅРёС†С‹ Рё СЃР°РјРѕРіРѕ С‡РёСЃР»Р°;
  */
 public class TaskSeventh {
 	public static void main(String[] args) {
@@ -12,25 +12,25 @@ public class TaskSeventh {
 
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("Введите число с которого начинается числовой ряд: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ СЃ РєРѕС‚РѕСЂРѕРіРѕ РЅР°С‡РёРЅР°РµС‚СЃСЏ С‡РёСЃР»РѕРІРѕР№ СЂСЏРґ: ");
 
 		checkLine(scan);
 
 		firstNumber = scan.nextInt();
 
 		if (firstNumber <= 0) {
-			System.out.println("Введите положительное число: ");
+			System.out.println("Р’РІРµРґРёС‚Рµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ: ");
 			firstNumber = scan.nextInt();
 		}
 
-		System.out.println("Введите число которым заканчивается числовой ряд: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ РєРѕС‚РѕСЂС‹Рј Р·Р°РєР°РЅС‡РёРІР°РµС‚СЃСЏ С‡РёСЃР»РѕРІРѕР№ СЂСЏРґ: ");
 
 		checkLine(scan);
 
 		secondNumber = scan.nextInt();
 
 		if (secondNumber <= firstNumber) {
-			System.out.println("Данное число должно иметь большее значение. Введите число повторно: ");
+			System.out.println("Р”Р°РЅРЅРѕРµ С‡РёСЃР»Рѕ РґРѕР»Р¶РЅРѕ РёРјРµС‚СЊ Р±РѕР»СЊС€РµРµ Р·РЅР°С‡РµРЅРёРµ. Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ РїРѕРІС‚РѕСЂРЅРѕ: ");
 			secondNumber = scan.nextInt();
 		}
 
@@ -48,7 +48,7 @@ public class TaskSeventh {
 	public static void checkLine(Scanner scan) {
 		while (!scan.hasNextInt()) {
 			String line = scan.nextLine();
-			System.out.println("Введите число: ");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 		}
 	}
 

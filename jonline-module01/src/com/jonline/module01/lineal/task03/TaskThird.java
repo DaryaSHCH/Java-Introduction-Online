@@ -13,13 +13,13 @@ public class TaskThird {
 		int x;
 		int y;
 
-		System.out.println("Введите значение для x: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ x: ");
 
 		checkNumber(scan);
 		
 		x = scan.nextInt();
 
-		System.out.println("Введите значение для y: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ y: ");
 		
 		checkNumber(scan);
 		
@@ -34,13 +34,13 @@ public class TaskThird {
 		double result;
 		result = (value1 / value2) * value3;
 
-		System.out.println("Результат вычислений равен: " + result);
+		System.out.println("Р РµР·СѓР»СЊС‚Р°С‚ РІС‹С‡РёСЃР»РµРЅРёР№ СЂР°РІРµРЅ: " + result);
 	}
 
 	public static void checkNumber(Scanner scan) {
 		while (!scan.hasNextInt()) {
 			String line = scan.nextLine();
-			System.out.println("Введите число: ");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 		}
 	}
 

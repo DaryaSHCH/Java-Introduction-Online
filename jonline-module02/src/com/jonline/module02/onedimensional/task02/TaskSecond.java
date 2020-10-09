@@ -13,11 +13,11 @@ public class TaskSecond {
 
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("Длина массива >> ");
+		System.out.println("Р”Р»РёРЅР° РјР°СЃСЃРёРІР° >> ");
 		checkNumber(scan);
 		lenghtD = scan.nextInt();
 		while (lenghtD <= 0) {
-			System.out.println("Длина массива >> ");
+			System.out.println("Р”Р»РёРЅР° РјР°СЃСЃРёРІР° >> ");
 			checkNumber(scan);
 			lenghtD = scan.nextInt();
 		}
@@ -38,14 +38,14 @@ public class TaskSecond {
 
 			}
 		}
-		System.out.println("Количество замен = " + counter);
+		System.out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РјРµРЅ = " + counter);
 
 	}
 
 	public static void checkNumber(Scanner scan) {
 		while (!scan.hasNextInt()) {
 			String line = scan.nextLine();
-			System.out.println("Введите число: ");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 		}
 	
 	}

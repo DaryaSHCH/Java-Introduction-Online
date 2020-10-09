@@ -42,15 +42,15 @@ public class TaskThird {
 				counterNegative++;
 			}
 		}
-		System.out.println("Количество отрицательных элементов = " + counterNegative);
-		System.out.println("Количество нулевых элементов = " + counterZero);
-		System.out.println("Количество положительных элементов = " + counterPositive);
+		System.out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ = " + counterNegative);
+		System.out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ РЅСѓР»РµРІС‹С… СЌР»РµРјРµРЅС‚РѕРІ = " + counterZero);
+		System.out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ = " + counterPositive);
 	}
 
 	public static void checkNumber(Scanner scan) {
 		while (!scan.hasNextInt()) {
 			String line = scan.nextLine();
-			System.out.println("Введите число: ");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 		}
 	}
 

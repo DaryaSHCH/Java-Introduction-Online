@@ -13,14 +13,14 @@ public class TaskThird {
 		
 		int matrixSize; 
 		
-		System.out.println("Введите значение для стороны матрицы>>");
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ СЃС‚РѕСЂРѕРЅС‹ РјР°С‚СЂРёС†С‹>>");
 		
 		checkLine(scan);
 		
 		matrixSize = scan.nextInt();
 		
 		while(matrixSize <= 0) {
-			System.out.println("Введите число больше чем 0>>");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ С‡РµРј 0>>");
 			matrixSize = scan.nextInt();
 			
 		}
@@ -35,7 +35,7 @@ public class TaskThird {
 			}
 		}
 		
-		System.out.println("Исходная матрица");
+		System.out.println("РСЃС…РѕРґРЅР°СЏ РјР°С‚СЂРёС†Р°");
 		
 		for(int i = 0; i < matrix.length; i++) {
 			for (int j = 0; j < matrix[i].length; j++) {
@@ -44,7 +44,7 @@ public class TaskThird {
 			System.out.println();
 		}
 		
-		System.out.println("Введите номер строки>>");
+		System.out.println("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ СЃС‚СЂРѕРєРё>>");
 		
 		int lineNumber;
 		
@@ -53,7 +53,7 @@ public class TaskThird {
 		lineNumber = scan.nextInt();
 		
 		while (lineNumber <= 0) {
-			System.out.println("Введите число больше чем 0>>");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ С‡РµРј 0>>");
 			lineNumber = scan.nextInt();
 		}
 		
@@ -64,7 +64,7 @@ public class TaskThird {
 			lineNumber = matrixSize - 1;
 		}
 		
-		System.out.println("Введите номер столбца>>");
+		System.out.println("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ СЃС‚РѕР»Р±С†Р°>>");
 		
 		int columnNumber;
 		
@@ -73,7 +73,7 @@ public class TaskThird {
 		columnNumber = scan.nextInt();
 		
 		while (columnNumber <= 0) {
-			System.out.println("Введите число больше чем 0>>");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ С‡РµРј 0>>");
 			columnNumber = scan.nextInt();
 		}
 		
@@ -85,13 +85,13 @@ public class TaskThird {
 		}
 		
 		
-		System.out.println("Строка");
+		System.out.println("РЎС‚СЂРѕРєР°");
 		
 		for (int i = 0; i < matrix.length; i++) {
              System.out.print(matrix[lineNumber][i]  + "\t");
 			}
 		System.out.println();
-		System.out.println("Столбец");
+		System.out.println("РЎС‚РѕР»Р±РµС†");
 		
 		for (int i = 0; i < matrix.length; i++) {
 			System.out.print(matrix[i][lineNumber]  + "\t");
@@ -105,7 +105,7 @@ public class TaskThird {
 	public static void checkLine(Scanner scan) {
 		while (!scan.hasNextInt()) {
 			String s = scan.nextLine();
-			System.out.println("Введите число>>");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ>>");
 		}
 	}
 

@@ -13,11 +13,11 @@ public class TaskThird {
 		long sumSqr = 0;
 		int x;
 
-		System.out.println("Введите число: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 
 		while (!scan.hasNextInt()) {
 			String line = scan.nextLine();
-			System.out.println("Введите число: ");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 		}
 
 		x = scan.nextInt();
@@ -27,7 +27,7 @@ public class TaskThird {
 			x++;
 
 		}
-		System.out.println("Сумма квадратов первых ста чисел: " + sumSqr);
+		System.out.println("РЎСѓРјРјР° РєРІР°РґСЂР°С‚РѕРІ РїРµСЂРІС‹С… СЃС‚Р° С‡РёСЃРµР»: " + sumSqr);
 
 	}
 }

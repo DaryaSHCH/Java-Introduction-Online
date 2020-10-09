@@ -6,7 +6,7 @@ public class TaskSixth {
 		int lenght = 65535; 
         
 		for (int i = 0; i <= lenght; i++) {
-            System.out.println( "Ñèìâîë - " + (char) i + "\n åãî ÷èñëîâîå îáîçíà÷åíèå - " + i);
+            System.out.println( "Ð¡Ð¸Ð¼Ð²Ð¾Ð» - " + (char) i + "\n ÐµÐ³Ð¾ Ñ‡Ð¸ÑÐ»Ð¾Ð²Ð¾Ðµ Ð¾Ð±Ð¾Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ - " + i);
         }
 	}
 }

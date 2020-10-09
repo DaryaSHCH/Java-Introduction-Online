@@ -1,7 +1,7 @@
 package com.jonline.module01.lineal.task05;
 /*
  * given number T - elapsed time in seconds;
- * output T in this  view: HH÷ MMìèí SSñ; 
+ * output T in this  view: HHÑ‡ MMĞ¼Ğ¸Ğ½ SSÑ; 
  */
 
 import java.text.SimpleDateFormat;
@@ -13,7 +13,7 @@ public class TaskFifth {
 	public static void main(String[] args) {
         int timeSeconds = 300000000;
 
-        final SimpleDateFormat dateFormat = new SimpleDateFormat("HH÷ mmìèí ssñ");
+        final SimpleDateFormat dateFormat = new SimpleDateFormat("HHÑ‡ mmĞ¼Ğ¸Ğ½ ssÑ");
         final TimeZone timeZone = TimeZone.getTimeZone("UTC");
         dateFormat.setTimeZone(timeZone);
 

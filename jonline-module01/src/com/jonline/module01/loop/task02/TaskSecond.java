@@ -16,18 +16,18 @@ public class TaskSecond {
 		int h;
 		int y;
 
-		System.out.println("Введите значениe для a: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёe РґР»СЏ a: ");
 
 		checkLine(scan);
 		a = scan.nextInt();
 
-		System.out.println("Введите значениe для b: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёe РґР»СЏ b: ");
 
 		checkLine(scan);
 
 		b = scan.nextInt();
 
-		System.out.println("Введите значениe для h: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёe РґР»СЏ h: ");
 
 		checkLine(scan);
 
@@ -47,7 +47,7 @@ public class TaskSecond {
 	public static void checkLine(Scanner scan) {
 		while (!scan.hasNextInt()) {
 			String line = scan.nextLine();
-			System.out.println("Введите число: ");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 		}
 	}
 }

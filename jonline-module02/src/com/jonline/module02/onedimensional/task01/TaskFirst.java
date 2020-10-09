@@ -41,13 +41,13 @@ public class TaskFirst {
 				sum += arrayA[i];
 			}
 		}
-		System.out.println("Сумма элементов массива кратных " + k + " равна  " + sum);
+		System.out.println("РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР° РєСЂР°С‚РЅС‹С… " + k + " СЂР°РІРЅР°  " + sum);
 	}
 
 	public static void checkNumber(Scanner scan) {
 		while (!scan.hasNextInt()) {
 			String line = scan.nextLine();
-			System.out.println("Введите число: ");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 		}
 	}
 

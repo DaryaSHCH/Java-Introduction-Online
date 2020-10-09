@@ -18,16 +18,16 @@ public class TaskSixth {
 		
 		int matrixSize;
 		
-		System.out.println("Ââåäèòå çíà÷åíèå äëÿ ñòîðîíû ìàòðèöû>>");
+		System.out.println("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð´Ð»Ñ ÑÑ‚Ð¾Ñ€Ð¾Ð½Ñ‹ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹>>");
 		 
 		while (!scan.hasNextInt()) {
 			String str = scan.nextLine();
-			System.out.println("Ââåäèòå ÷èñëî>>");
+			System.out.println("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾>>");
 		}
 		matrixSize = scan.nextInt();
 		
 		while ( matrixSize <= 0 && matrixSize % 2 != 0) {
-			System.out.println("Ââåäèòå ÷åòíîå ÷èñëî áîëüøå ÷åì 0 >>");
+			System.out.println("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡ÐµÑ‚Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾ Ð±Ð¾Ð»ÑŒÑˆÐµ Ñ‡ÐµÐ¼ 0 >>");
 					matrixSize = scan.nextInt();
 		}
 		

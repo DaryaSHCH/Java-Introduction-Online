@@ -15,7 +15,7 @@ public class TaskFourth {
 
         while (!sc.hasNextInt()) {
             String line = sc.nextLine();
-            System.out.println("Ââåäèòå ÷èñëî >> ");
+            System.out.println("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾ >> ");
         }
         lenghtN = sc.nextInt();
         while (lenghtN <= 0) {
@@ -48,9 +48,9 @@ public class TaskFourth {
         anotherArray[indexMax] = anotherArray[indexMin];
         anotherArray[indexMin] = anotherBuf;
 
-        System.out.println("Íàèáîëüøèé ýëåìåíò ìàññèâà: " + mostElement + " c èíäåêñîì " + indexMax);
-        System.out.println("Íàèìåíüøèé ýëåìåíò ìàññèâà: " + smallestElement + " c èíäåêñîì " + indexMin);
-        System.out.println(" Ïîçèöèè äàííûõ ýëåìåíòîâ èçìåíåíû");
+        System.out.println("ÐÐ°Ð¸Ð±Ð¾Ð»ÑŒÑˆÐ¸Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð¼Ð°ÑÑÐ¸Ð²Ð°: " + mostElement + " c Ð¸Ð½Ð´ÐµÐºÑÐ¾Ð¼ " + indexMax);
+        System.out.println("ÐÐ°Ð¸Ð¼ÐµÐ½ÑŒÑˆÐ¸Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð¼Ð°ÑÑÐ¸Ð²Ð°: " + smallestElement + " c Ð¸Ð½Ð´ÐµÐºÑÐ¾Ð¼ " + indexMin);
+        System.out.println(" ÐŸÐ¾Ð·Ð¸Ñ†Ð¸Ð¸ Ð´Ð°Ð½Ð½Ñ‹Ñ… ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¸Ð·Ð¼ÐµÐ½ÐµÐ½Ñ‹");
         System.out.println(Arrays.toString(anotherArray));
 	}
 }

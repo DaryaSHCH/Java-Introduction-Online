@@ -13,11 +13,11 @@ public class TaskFourth {
         int sqr = 0;
         int y;
 
-        System.out.println("Введите число: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 
         while (!scan.hasNextInt()) {
             String line = scan.nextLine();
-            System.out.println("Введите число: ");
+            System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
         }
 
         y = scan.nextInt();
@@ -28,7 +28,7 @@ public class TaskFourth {
             y++;
 
         }
-        System.out.println("Произведение квадратов первых двухсот чисел: "+ mult );
+        System.out.println("РџСЂРѕРёР·РІРµРґРµРЅРёРµ РєРІР°РґСЂР°С‚РѕРІ РїРµСЂРІС‹С… РґРІСѓС…СЃРѕС‚ С‡РёСЃРµР»: "+ mult );
 
     }
 }

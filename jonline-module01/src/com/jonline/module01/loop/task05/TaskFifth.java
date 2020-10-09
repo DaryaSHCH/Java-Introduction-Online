@@ -17,13 +17,13 @@ public class TaskFifth {
 		
 		Scanner scan = new Scanner(System.in);
         
-		System.out.println("Введите значение для е: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ Рµ: ");
 		
 		e = scan.nextDouble();
 		
 		while (!scan.hasNextDouble()) {
 			String line = scan.nextLine();
-			System.out.println("Введите число: ");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 		}
 		 
 		

@@ -11,22 +11,22 @@ public class TaskFifth {
 
 		int matrixSize;
 
-		System.out.println("Введите значение для стороны матрицы>>");
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ СЃС‚РѕСЂРѕРЅС‹ РјР°С‚СЂРёС†С‹>>");
 
 		while (!scan.hasNextInt()) {
 			String s = scan.nextLine();
-			System.out.println("Введите число >>");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ >>");
 		}
 
 		matrixSize = scan.nextInt();
 
 		while (matrixSize <= 0) {
-			System.out.println("Введите число больше чем 0>>");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ С‡РµРј 0>>");
 			matrixSize = scan.nextInt();
 		}
 
 		while (matrixSize % 2 != 0) {
-			System.out.println("Введите четное число>>");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РµС‚РЅРѕРµ С‡РёСЃР»Рѕ>>");
 			matrixSize = scan.nextInt();
 
 		}
@@ -39,7 +39,7 @@ public class TaskFifth {
 			}
 		}
 
-		System.out.println("Результат \n");
+		System.out.println("Р РµР·СѓР»СЊС‚Р°С‚ \n");
 		
 
 		for (int i = 0; i < matrixSquare.length; i++) {

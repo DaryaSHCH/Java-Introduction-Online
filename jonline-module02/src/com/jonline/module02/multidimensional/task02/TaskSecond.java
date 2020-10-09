@@ -13,17 +13,17 @@ public class TaskSecond {
 		
 		int linesCount;
 		
-		System.out.println("Введите значение стороны для матрицы>> ");
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ СЃС‚РѕСЂРѕРЅС‹ РґР»СЏ РјР°С‚СЂРёС†С‹>> ");
 		
 		while (!scan.hasNextInt()) {
 			String line = scan.nextLine();
-			System.out.println("Введите число>>");	
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ>>");	
 		}
 		
 		linesCount = scan.nextInt();
 		
 		while(linesCount <= 0) {
-			System.out.println("Введите число больше чем 0>> ");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ С‡РµРј 0>> ");
 			linesCount = scan.nextInt();
 		}
 		
@@ -40,7 +40,7 @@ public class TaskSecond {
 			}
 		}
 		
-		System.out.println("Исходная матрица");
+		System.out.println("РСЃС…РѕРґРЅР°СЏ РјР°С‚СЂРёС†Р°");
 		
 		for ( int i = 0; i < multiSquare.length; i++) {
 			
@@ -51,7 +51,7 @@ public class TaskSecond {
 			System.out.println();
 		}
 		
-		System.out.println("Диагональ №1");
+		System.out.println("Р”РёР°РіРѕРЅР°Р»СЊ в„–1");
 		
 		for (int i = 0; i < multiSquare.length; i++) {
 			for ( int j = 0; j < multiSquare[i].length; j++) {
@@ -63,7 +63,7 @@ public class TaskSecond {
 			System.out.println();
 		}
 		
-		System.out.println("Диагональ №2");
+		System.out.println("Р”РёР°РіРѕРЅР°Р»СЊ в„–2");
 		
 		for (int i = 0; i < multiSquare.length; i++) {
 			for ( int j = 0; j < multiSquare[i].length; j++) {

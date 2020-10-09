@@ -9,13 +9,13 @@ import java.util.Scanner;
 public class TaskFifth {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Введите число: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 		double f;
 		int x;
 		String line;
 		while (!sc.hasNextInt()) {
 			line = sc.nextLine();
-			System.out.println("Введите число: ");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 		}
 		x = sc.nextInt();
 

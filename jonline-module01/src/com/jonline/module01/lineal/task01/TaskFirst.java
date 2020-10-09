@@ -13,19 +13,19 @@ public class TaskFirst {
 		double b;
 		double c;
 
-		System.out.println("Введите значение для а: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ Р°: ");
 
 		checkNumber(scan);
 
 		a = scan.nextDouble();
 
-		System.out.println("Введите значение для b: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ b: ");
 
 		checkNumber(scan);
 
 		b = scan.nextDouble();
 
-		System.out.println("Введите значение для c: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ c: ");
 
 		checkNumber(scan);
 		
@@ -40,7 +40,7 @@ public class TaskFirst {
 	public static void checkNumber(Scanner scan) {
 		while (!scan.hasNextDouble()) {
 			String line = scan.nextLine();
-			System.out.println("Введите число: ");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 		}
 	}
 }

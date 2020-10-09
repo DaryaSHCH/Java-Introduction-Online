@@ -15,25 +15,25 @@ public class TaskFirst {
 
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("Введите количество строк для заданной матрицы>> ");
+		System.out.println("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє РґР»СЏ Р·Р°РґР°РЅРЅРѕР№ РјР°С‚СЂРёС†С‹>> ");
 
 		checkLine(scan);
 
 		linesCount = scan.nextInt();
 
 		while (linesCount <= 0) {
-			System.out.println("Введите число больше 0>> ");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ 0>> ");
 			linesCount = scan.nextInt();
 		}
 
-		System.out.println("Введите количество столбцов для заданной матрицы>> ");
+		System.out.println("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ РґР»СЏ Р·Р°РґР°РЅРЅРѕР№ РјР°С‚СЂРёС†С‹>> ");
 
 		checkLine(scan);
 
 		columnsCount = scan.nextInt();
 
 		while (columnsCount <= 0) {
-			System.out.println("Введите число больше 0>> ");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ 0>> ");
 			linesCount = scan.nextInt();
 		}
 
@@ -48,7 +48,7 @@ public class TaskFirst {
 			}
 		}
         
-		System.out.println("Исходная матрица:");
+		System.out.println("РСЃС…РѕРґРЅР°СЏ РјР°С‚СЂРёС†Р°:");
 		
 		for (int i = 0; i < multi.length; i++) {
 
@@ -58,7 +58,7 @@ public class TaskFirst {
 			System.out.println();
 		}
 		
-		System.out.println("Результат:");
+		System.out.println("Р РµР·СѓР»СЊС‚Р°С‚:");
 		
 		for (int i = 0; i < multi.length; i++) {
 
@@ -75,7 +75,7 @@ public class TaskFirst {
 	public static void checkLine(Scanner scan) {
 		while (!scan.hasNextInt()) {
 			String str = scan.nextLine();
-			System.out.println("Введите число>> ");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ>> ");
 		}
 	}
 

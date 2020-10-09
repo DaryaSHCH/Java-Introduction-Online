@@ -64,7 +64,7 @@ public class TaskNinth {
 	public static void checkNumber(Scanner scan) {
 		while (!scan.hasNextInt()) {
 			String str = scan.nextLine();
-			System.out.println("Ââåäèòå ÷èñëî>>");
+			System.out.println("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾>>");
 		}
 	}
 

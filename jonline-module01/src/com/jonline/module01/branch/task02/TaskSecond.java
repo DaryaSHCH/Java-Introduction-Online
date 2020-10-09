@@ -13,24 +13,24 @@ public class TaskSecond {
 	    int b; 
 	    int c; 
 	    int d; 
-	    System.out.println("Введите значение для а: ");
+	    System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ Р°: ");
 
 		checkNumber(scan);
 
 		a = scan.nextInt();
 
-		System.out.println("Введите значение для b: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ b: ");
 
 		checkNumber(scan);
 
 		b = scan.nextInt();
 
-		System.out.println("Введите значение для c: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ c: ");
 
 		checkNumber(scan);
 		c = scan.nextInt();
 		
-		System.out.println("Введите значение для d: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ d: ");
 		
 		checkNumber(scan);
 		d = scan.nextInt();
@@ -46,7 +46,7 @@ public class TaskSecond {
 	public static void checkNumber(Scanner scan) {
 		while (!scan.hasNextInt()) {
 			String line = scan.nextLine();
-			System.out.println("Введите число: ");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 		}
 	}
 }

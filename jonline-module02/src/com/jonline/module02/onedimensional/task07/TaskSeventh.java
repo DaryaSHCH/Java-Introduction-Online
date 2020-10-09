@@ -15,7 +15,7 @@ public class TaskSeventh {
 		
 		while (!scan.hasNextInt()) {
 			String s = scan.nextLine();
-			System.out.println("Ââåäèòå ÷èñëî>>");
+			System.out.println("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾>>");
 		}
 
 		lengthN = scan.nextInt();

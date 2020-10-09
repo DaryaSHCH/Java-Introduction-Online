@@ -16,7 +16,7 @@ public class TaskThird {
 		int x3;
 		int y3;
 
-		System.out.println("Введите координаты для точки A: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ РґР»СЏ С‚РѕС‡РєРё A: ");
 		System.out.println("x1 =  ");
 		checkNumber(scan);
 		x1 = scan.nextInt();
@@ -24,7 +24,7 @@ public class TaskThird {
 		checkNumber(scan);
 		y1 = scan.nextInt();
 
-		System.out.println("Введите координаты для точки B: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ РґР»СЏ С‚РѕС‡РєРё B: ");
 		System.out.println("x2 =  ");
 		checkNumber(scan);
 		x2 = scan.nextInt();
@@ -32,7 +32,7 @@ public class TaskThird {
 		checkNumber(scan);
 		y2 = scan.nextInt();
 
-		System.out.println("Введите координаты для точки C: ");
+		System.out.println("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ РґР»СЏ С‚РѕС‡РєРё C: ");
 		System.out.println("x3 =  ");
 		checkNumber(scan);
 		x3 = scan.nextInt();
@@ -47,15 +47,15 @@ public class TaskThird {
 		int multiplication1 = subtractionX1 * subtractionY2;
 		int multiplication2 = subtractionX2 * subtractionY1;
 		if (multiplication1 == multiplication2) {
-			System.out.println("Заданные точки находятся на одной прямой");
+			System.out.println("Р—Р°РґР°РЅРЅС‹Рµ С‚РѕС‡РєРё РЅР°С…РѕРґСЏС‚СЃСЏ РЅР° РѕРґРЅРѕР№ РїСЂСЏРјРѕР№");
 		} else
-			System.out.println("Заданные точки не находятся на одной прямой");
+			System.out.println("Р—Р°РґР°РЅРЅС‹Рµ С‚РѕС‡РєРё РЅРµ РЅР°С…РѕРґСЏС‚СЃСЏ РЅР° РѕРґРЅРѕР№ РїСЂСЏРјРѕР№");
 	}
 
 	public static void checkNumber(Scanner scan) {
 		while (!scan.hasNextInt()) {
 			String line = scan.nextLine();
-			System.out.println("Введите число: ");
+			System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 		}
 	}
 }

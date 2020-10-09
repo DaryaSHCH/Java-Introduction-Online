@@ -68,7 +68,7 @@ public class TaskEighth {
 	public static void checkLine(Scanner sc) {
 		while (!sc.hasNextInt()) {
 			String s = sc.nextLine();
-			System.out.println("Ââåäèòå ÷èñëî>>");
+			System.out.println("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾>>");
 		}
 	}
 
