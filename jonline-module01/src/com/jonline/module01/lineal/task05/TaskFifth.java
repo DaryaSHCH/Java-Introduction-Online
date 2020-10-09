@@ -4,25 +4,32 @@ package com.jonline.module01.lineal.task05;
  * output T in this  view: HHч MMмин SSс; 
  */
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.TimeZone;
-import java.util.concurrent.TimeUnit;
-
 public class TaskFifth {
+	static int secondsHours = 3600;
+	static int minutesHours = 60;
+
 	public static void main(String[] args) {
-        int timeSeconds = 300000000;
 
-        final SimpleDateFormat dateFormat = new SimpleDateFormat("HHч mmмин ssс");
-        final TimeZone timeZone = TimeZone.getTimeZone("UTC");
-        dateFormat.setTimeZone(timeZone);
+		int time;
+		time = 30_000;
 
-        final long timeMillis = TimeUnit.SECONDS.toMillis(timeSeconds);
+		int hours;
+		int minutes;
+		int seconds;
 
-        final Date date = new Date(timeMillis);
+		hours = time / secondsHours;
+		
+		int hoursTosec;
+		hoursTosec = hours * secondsHours;
+		
+		minutes = (time - hoursTosec) / minutesHours;
+		
+		int minutesToSec;
+		minutesToSec = minutes * minutesHours;
+		
+		seconds = time - hoursTosec - minutesToSec;
 
-        final String formattedDate = dateFormat.format(date);
-        System.out.println(formattedDate);
-    }
+		System.out.println(hours + "ч " + minutes + "мин " + seconds + "с");
+	}
 
 }
