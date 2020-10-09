@@ -10,13 +10,11 @@ public class TaskFourth {
 	public static void main(String[] args) {
         
 		double x = 567.128;
-
-        double y = (int) x;
-        double result;
-        result = y / 1000 + (x - y) * 1000;
         
-        BigDecimal result2 = new BigDecimal(result);
-
-        System.out.println(result2.setScale(3, RoundingMode.DOWN));
+        double y; 
+        y = (int) x;
+        y = (x * 1000) % 1000 +(int) x / 1000.0;
+        System.out.println(y);
+        
     }
 }
