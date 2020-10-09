@@ -17,6 +17,8 @@ public class TaskSixth {
 		Scanner scan = new Scanner (System.in);
 		
 		int matrixSize;
+		int centralPart;
+		centralPart = 0;
 		
 		System.out.println("Введите значение для стороны матрицы>>");
 		 
@@ -34,10 +36,25 @@ public class TaskSixth {
 		int [][] matrix = new int [matrixSize][matrixSize];
 		
 		for ( int i = 0; i < matrix.length; i++) {
-			for (int j = 0; j < matrix[i].length; j++) {
+			for (int j = i; j < matrix[i].length - i; j++) {
+				matrix[i][j] = 1;
 				
 			}
 		}
+		for (int i = matrix.length-1; i >= matrix.length/2; i--) {
+			for (int j = centralPart; j < matrix[i].length - centralPart; j++) {
+				matrix[i][j] = 1;
+			}
+			centralPart++;
+		}
+		
+		for ( int [] array : matrix) {
+			for (int element : array) {
+				System.out.print(element + "\t");
+			}
+			System.out.println();
+		}
+		
 	}
 
 }

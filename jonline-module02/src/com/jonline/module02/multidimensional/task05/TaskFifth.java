@@ -39,7 +39,7 @@ public class TaskFifth {
 			}
 		}
 
-		System.out.println("Результат \n");
+		System.out.println("Результат \n");   
 		
 
 		for (int i = 0; i < matrixSquare.length; i++) {
