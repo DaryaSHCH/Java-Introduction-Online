@@ -32,27 +32,24 @@ public class TaskEleventh {
 			}
 			System.out.println();
 		}
-		
+
 		int counter = 0;
- 		
+
 		System.out.println("Numbers of rows: ");
+
 		for (int i = 0; i < matrix.length; i++) {
 			for (int j = 0; j < matrix[i].length; j++) {
-                  if (matrix[i][j] == 5) {
-                	  counter++; 
-                  }
-			}
-			
-			if (counter < 3) { 
-				counter = 0; 
-			} else { 
-				System.out.print( (i + 1) + " ");
-					counter = 0;
+				if (matrix[i][j] == 5) {
+					counter++;
 				}
 			}
-		    
-
+			
+			if (counter < 3) {
+				counter = 0;
+			} else {
+				System.out.print((i + 1) + " ");
+				counter = 0;
+			}
 		}
-
 	}
-
+}
