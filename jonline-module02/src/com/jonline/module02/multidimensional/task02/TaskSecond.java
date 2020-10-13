@@ -51,7 +51,7 @@ public class TaskSecond {
 			System.out.println();
 		}
 		
-		System.out.println("Диагональ №1");
+		System.out.println("Элементы главной диагонали");
 		
 		for (int i = 0; i < multiSquare.length; i++) {
 			for ( int j = 0; j < multiSquare[i].length; j++) {
@@ -63,7 +63,7 @@ public class TaskSecond {
 			System.out.println();
 		}
 		
-		System.out.println("Диагональ №2");
+		System.out.println("Элементы побочной диагонали");
 		
 		for (int i = 0; i < multiSquare.length; i++) {
 			for ( int j = 0; j < multiSquare[i].length; j++) {
@@ -77,4 +77,4 @@ public class TaskSecond {
 		
 	}
 
-}
+}  
