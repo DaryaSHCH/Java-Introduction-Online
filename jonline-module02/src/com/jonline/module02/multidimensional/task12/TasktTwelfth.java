@@ -8,17 +8,19 @@ import java.util.Random;
 public class TasktTwelfth {
 	public static void main(String[] args) {
 		
-		int matrixSize;
-		matrixSize = 6;
+		int row;
+		row = 6;
+		int column;
+		column = 8; 
 		
 		Random random = new Random(); 
 		
-		int [][] matrix = new int [matrixSize][matrixSize];
+		int [][] matrix = new int [row][column];
 		
 		for ( int i = 0; i < matrix.length; i++) {
 			for (int j = 0; j < matrix[i].length; j++) {
 				
-				matrix[i][j] = random.nextInt(10);
+				matrix[i][j] = random.nextInt(10) - 3;
 			}
 		}
 		System.out.println("Original matrix");
@@ -29,6 +31,50 @@ public class TasktTwelfth {
 			}
 			System.out.println();
 		}
+		
+		int buff = 0; 
+		for ( int i = 0; i < matrix.length; i++) {
+			for ( int j = 0; j < matrix[i].length; j++) {
+				for ( int k = j+1; k < matrix[i].length; k++) {
+					 if ( matrix[i][j] > matrix[i][k]) {
+						 buff = matrix[i][j];
+						 matrix[i][j] = matrix[i][k];
+						 matrix[i][k] = buff;
+					 }
+				}
+			}
+		}
+		System.out.println(" Sorted matrix rows in ascending");
+
+		for (int[] array : matrix) {
+			for (int element : array) {
+				System.out.print(element + "\t");
+			}
+			System.out.println();
+		}
+		
+		int buffSecond = 0; 
+		for ( int i = 0; i < matrix.length; i++) {
+			for ( int j = 0; j < matrix[i].length; j++) {
+				for ( int k = j+1; k < matrix[i].length; k++) {
+					 if ( matrix[i][j] < matrix[i][k]) {
+						 buffSecond = matrix[i][j];
+						 matrix[i][j] = matrix[i][k];
+						 matrix[i][k] = buffSecond;
+					 }
+				}
+			}
+		}
+		
+		System.out.println(" Sorted matrix rows in descending");
+
+		for (int[] array : matrix) {
+			for (int element : array) {
+				System.out.print(element + "\t");
+			}
+			System.out.println();
+		}
+		
 	
 	}
 
