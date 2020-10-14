@@ -23,6 +23,7 @@ public class TaskTwelth {
                 matrix[i][j] = random.nextInt(10) - 3;
             }
         }
+        
         System.out.println("Original matrix");
 
         for (int[] array : matrix) {
@@ -55,6 +56,7 @@ public class TaskTwelth {
         }
 
         int buffSecond = 0;
+       
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 for (int count = j + 1; count < matrix[i].length; count++) {
