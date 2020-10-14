@@ -7,19 +7,19 @@ import java.util.Random;
  */
 public class TasktTwelfth {
 	public static void main(String[] args) {
-		
+
 		int row;
 		row = 6;
 		int column;
-		column = 8; 
-		
-		Random random = new Random(); 
-		
-		int [][] matrix = new int [row][column];
-		
-		for ( int i = 0; i < matrix.length; i++) {
+		column = 8;
+
+		Random random = new Random();
+
+		int[][] matrix = new int[row][column];
+
+		for (int i = 0; i < matrix.length; i++) {
 			for (int j = 0; j < matrix[i].length; j++) {
-				
+
 				matrix[i][j] = random.nextInt(10) - 3;
 			}
 		}
@@ -31,19 +31,20 @@ public class TasktTwelfth {
 			}
 			System.out.println();
 		}
-		
-		int buff = 0; 
-		for ( int i = 0; i < matrix.length; i++) {
-			for ( int j = 0; j < matrix[i].length; j++) {
-				for ( int k = j+1; k < matrix[i].length; k++) {
-					 if ( matrix[i][j] > matrix[i][k]) {
-						 buff = matrix[i][j];
-						 matrix[i][j] = matrix[i][k];
-						 matrix[i][k] = buff;
-					 }
+
+		int buff = 0;
+		for (int i = 0; i < matrix.length; i++) {
+			for (int j = 0; j < matrix[i].length; j++) {
+				for (int count = j + 1; count < matrix[i].length; count++) {
+					if (matrix[i][j] > matrix[i][count]) {
+						buff = matrix[i][j];
+						matrix[i][j] = matrix[i][count];
+						matrix[i][count] = buff;
+					}
 				}
 			}
 		}
+		
 		System.out.println(" Sorted matrix rows in ascending");
 
 		for (int[] array : matrix) {
@@ -52,20 +53,20 @@ public class TasktTwelfth {
 			}
 			System.out.println();
 		}
-		
-		int buffSecond = 0; 
-		for ( int i = 0; i < matrix.length; i++) {
-			for ( int j = 0; j < matrix[i].length; j++) {
-				for ( int k = j+1; k < matrix[i].length; k++) {
-					 if ( matrix[i][j] < matrix[i][k]) {
-						 buffSecond = matrix[i][j];
-						 matrix[i][j] = matrix[i][k];
-						 matrix[i][k] = buffSecond;
-					 }
+
+		int buffSecond = 0;
+		for (int i = 0; i < matrix.length; i++) {
+			for (int j = 0; j < matrix[i].length; j++) {
+				for (int count = j + 1; count < matrix[i].length; count++) {
+					if (matrix[i][j] < matrix[i][count]) {
+						buffSecond = matrix[i][j];
+						matrix[i][j] = matrix[i][count];
+						matrix[i][count] = buffSecond;
+					}
 				}
 			}
 		}
-		
+
 		System.out.println(" Sorted matrix rows in descending");
 
 		for (int[] array : matrix) {
@@ -74,8 +75,7 @@ public class TasktTwelfth {
 			}
 			System.out.println();
 		}
-		
-	
+
 	}
 
 }
