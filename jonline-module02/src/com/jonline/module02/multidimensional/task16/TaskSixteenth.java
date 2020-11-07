@@ -30,26 +30,49 @@ public class TaskSixteenth {
 			matrixSize = scan.nextInt();
 		}
 
-		int magConst = (matrixSize * (matrixSize * matrixSize + 1)) / 2;
+		int magConst = matrixSize * ((matrixSize * matrixSize + 1) / 2);
 		int magCenter = (matrixSize * matrixSize + 1) / 2;
-
-		Random rand = new Random();
 
 		int[][] magicSquare = new int[matrixSize][matrixSize];
 
-		for (int i = magicSquare.length / 2; i < magicSquare.length; i--) {
-			for (int j = matrixSize - 1; j >= -1; j++) {
-				
-				if (i == -1 && j == magicSquare.length) {
-					i = matrixSize - 1;
-					j = 0;
-				}
-				magicSquare[i][j] = i++;
+		int number = 1;
+		
+		int i = 0;
+		
+		int j = matrixSize / 2;
+		
+		int currentRowInd;
+		
+		int currentColumnInd;
+		
+		while (number <= matrixSize * matrixSize) {
+			
+			magicSquare[i][j] = number;
+			number++;
+			currentRowInd = i;
+			currentColumnInd = j;
+			
+			i -= 1;
+			j += 1;
+			
+			if (i == -1) {
+				i = matrixSize - 1;
 			}
-
+			
+		    if (j == matrixSize) {
+				j = 0;
+			}
+			
+			if (magicSquare[i][j] != 0) {
+				i = currentRowInd + 1;
+				j = currentColumnInd;
+				if (i == -1) {
+					i = matrixSize - 1;
+				}
+			}
 		}
 
-		System.out.println("Original Matrix");
+		System.out.println("Magic Square");
 
 		for (int[] array : magicSquare) {
 			for (int element : array) {
