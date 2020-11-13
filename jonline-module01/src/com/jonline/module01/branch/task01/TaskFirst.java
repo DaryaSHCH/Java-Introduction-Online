@@ -32,7 +32,7 @@ public class TaskFirst {
 		angleB = scan.nextInt();
 		
 		while (angleB <= 0) {
-        	System.out.println("angle B = ");
+        	System.out.println("angle B =>> ");
         	angleB = scan.nextInt();
         }
 
