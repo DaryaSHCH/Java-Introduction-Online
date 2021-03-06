@@ -18,7 +18,7 @@ public class TaskFirst {
 
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("input size for fist array>>");
+		System.out.println("input size for first array>>");
 
 		checkNumber(scan);
 
@@ -42,60 +42,60 @@ public class TaskFirst {
 			checkNumber(scan);
 			secondArraySize = scan.nextInt();
 		}
+
 		while (secondArraySize == firstArraySize) {
 			System.out.println("Size of second array must be different first arrays size \n repeat input>>");
 			checkNumber(scan);
 			secondArraySize = scan.nextInt();
 		}
-		
-		
+
 		System.out.println("K>>");
-		
+
 		checkNumber(scan);
+
 		k = scan.nextInt();
-		
-		while (k <= 0 || ( k >= firstArraySize || k >= secondArraySize)) {
+
+		while (k <= 0 || k >= firstArraySize) {
 			System.out.println("input integer more then 0 and within the values ​​of the given arrays>>");
 			checkNumber(scan);
 			k = scan.nextInt();
 		}
-				
-		
+
 		Random rand = new Random();
 
 		int[] firstArray = new int[firstArraySize + secondArraySize];
 
 		for (int i = 0; i < firstArraySize; i++) {
-			firstArray[i] = rand.nextInt(10);	
+			firstArray[i] = rand.nextInt(10);
 		}
-		
-		
+
 		int[] secondArray = new int[secondArraySize];
-		
-		for( int i = 0; i < secondArray.length; i++) {	
-			secondArray[i] = rand.nextInt(5) - 5; 
+
+		for (int i = 0; i < secondArray.length; i++) {
+			secondArray[i] = rand.nextInt(5) - 5;
 		}
-		
-		System.out.println("First Array>>"); 
+
+		System.out.println("First Array>>");
+
 		for (int i = 0; i < firstArraySize; i++) {
 			System.out.print(firstArray[i] + " ");
 		}
-		
+
 		System.out.println("\n Second Array>> \n" + Arrays.toString(secondArray));
-		
-		int  newInd = firstArray.length - (k -1);
-		
+
+		int newIndex; // индекс элементов 1 массива, которые необходимо сдвинуть в концу первого
+						// массива.
+
+		newIndex = secondArraySize + k;
+
 		for (int i = k; i < firstArraySize; i++) {
-			   firstArray[newInd] = firstArray[i];
-			   newInd++;
-			}
-		
-				
-		System.out.println(Arrays.toString(firstArray));
-        	
+			firstArray[newIndex] = firstArray[i];
+			newIndex++;
+		}
+
 		System.arraycopy(secondArray, 0, firstArray, k, secondArray.length);
-		
-		System.out.println("result \n" + Arrays.toString(firstArray));
+
+		System.out.println("result \n the first and second arrays are  merged \n" + Arrays.toString(firstArray));
 	}
 
 	private static void checkNumber(Scanner scan) {
@@ -106,4 +106,3 @@ public class TaskFirst {
 	}
 
 }
-

@@ -67,7 +67,7 @@ public class TaskSecond {
 
 		sortArray(firstArray);
 
-		System.out.println("\n First Array>> \n" + Arrays.toString(firstArray));
+		System.out.println("\n result >> \n" + Arrays.toString(firstArray));
 
 	}
 
@@ -88,10 +88,10 @@ public class TaskSecond {
 		}
 	}
 
-	static void toSwap(int[] firstArray, int index1, int index2) {
-		int element = firstArray[index1];
-		firstArray[index1] = firstArray[index2];
-		firstArray[index2] = element;
+	static void toSwap(int[] firstArray, int indexFirst, int indexSecond) {
+		int element = firstArray[indexFirst];
+		firstArray[indexFirst] = firstArray[indexSecond];
+		firstArray[indexSecond] = element;
 	}
 
 	private static void checkNumber(Scanner scan) {
