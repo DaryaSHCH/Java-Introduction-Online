@@ -11,60 +11,53 @@ import java.util.Scanner;
  */
 public class TaskEighth {
 	public static void main (String [] args) {
-		System.out.println (" If you want to use random array input 1 >>");
-		System.out.println (" If you want to use constant array input 2 >>");
 		
 		Scanner scan = new Scanner(System.in);
 		
-		int arraySize;
+		System.out.println (" Will you use array with random values?"
+				+ " Input \"Y\" if your answer Yes, or \"N\" otherwise ");
+		String answer;
+		
+		while (!scan.hasNextLine()) {
+			String line = scan.nextLine();
+			System.out.println("input \"Y\" or \"N\" ");
+		}
+		answer = scan.toString();
+		
+		
+		int randomArraySize;
 		
 		System.out.println(" input array length >>");
 		
 		checkNumber(scan);
-		
-		arraySize = scan.nextInt();
-		
-		while (arraySize <= 0) {
-			  System.out.println("input integer more then 0 >>");
-			  checkNumber(scan);
-			  arraySize = scan.nextInt();
-		} 
-		
-		
-		Random rand = new Random();
-		
-		int [] arrayP = new int [arraySize];
-		
-		for (int i = 0; i < arrayP.length; i++) {
-			arrayP[i] = rand.nextInt(2) + 1;
+		randomArraySize = scan.nextInt();
+		while (randomArraySize <= 0) {
+			System.out.println("input integer more then 0 >> ");
+			checkNumber(scan);
+			randomArraySize = scan.nextInt();
 		}
 		
 		
-		System.out.println(" numenator array >> \t" + Arrays.toString(arrayP) + "\n");
+		int [] arrayRandomNumenator = new int [randomArraySize];
+		int [] arrayRandomDenominator = new int [randomArraySize]; 
 		
-		int [] arrayQ = new int [arraySize];
+		arrayRandomNumenator = createRandomArray(randomArraySize);
+		arrayRandomDenominator = createRandomArray(randomArraySize);
 		
-		for (int i = 0; i < arrayQ.length; i++) {
-			arrayQ[i] = rand.nextInt(9) + 1;
-		}
+		int [] arrayConstantNumenator = new int [] {1, 2, 3, 4, 5, 6, 8};		
 		
-		System.out.println(" denominator array >> \t" + Arrays.toString(arrayQ) + "\n");
+		System.out.println(" numenator array >> \t" + Arrays.toString(arrayRandomNumenator) + "\n");
+		
+		int [] arrayConstantDenominator = new int [] {5, 10, 6, 9, 15, 18, 20};
+		
+		System.out.println(" denominator array >> \t" + Arrays.toString(arrayRandomDenominator) + "\n");
 		//System.out.printf("  denominator array >> %s \n\n", Arrays.toString(arrayQ));
 		//System.out.println(String.format("  denominator array >> %s %s \n\n", Arrays.toString(arrayQ), "test"));
 		
-		findGlobalDenominatorAndSort(
-				new int [] {1, 2, 3, 4, 5, 6},
-				new int [] {5, 10,6, 9, 15,18} );
+		findGlobalDenominatorAndSort(arrayRandomNumenator,arrayRandomDenominator);
 		
 		
 		
-	}
-
-	private static void checkNumber(Scanner scan) {
-		while (!scan.hasNextInt()) {
-			String line = scan.nextLine();
-			System.out.println("input integer >>");
-		}
 	}
 	
 	private static void findGlobalDenominatorAndSort(int[] numenators, int [] denominators) {
@@ -120,9 +113,20 @@ public class TaskEighth {
 		System.out.println(" numenator array >> \t" + Arrays.toString(numenators) + "\n");
 		System.out.println(" denominator array >> \t" + Arrays.toString(denominators) + "\n");
 	}
+	public static void checkNumber(Scanner scan) {
+		while (!scan.hasNextInt()) {
+			String line = scan.nextLine();
+			System.out.println("Введите число: ");
+		}
+	}
 	
-	public static int [] createRandomArray (int arraySize) {
-		return int [];
+	private static int [] createRandomArray (int randomArraySize) {
+		Random rand = new Random();
+		int [] randomArray = new int [randomArraySize];
+		for (int i = 0; i < randomArray.length; i++) {
+			randomArray[i] = rand.nextInt(9) + 1;
+		}
+		return randomArray;
 		
 	}
 }
