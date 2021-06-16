@@ -58,8 +58,10 @@ public class TaskEighth {
 			findGlobalDenominatorAndSort(arrayRandomNumenator, arrayRandomDenominator);
 		}
 
-		System.out.println(" numenator array >> \t" + Arrays.toString(arrayRandomNumenator) + "\n");
-		System.out.println(" denominator array >> \t" + Arrays.toString(arrayRandomDenominator) + "\n");
+		System.out
+				.println(" Sorted and regulated numenator array >> \t" + Arrays.toString(arrayRandomNumenator) + "\n");
+		System.out.println(
+				" Sorted and regulated denominator array >> \t" + Arrays.toString(arrayRandomDenominator) + "\n");
 	}
 
 	private static void findGlobalDenominatorAndSort(int[] numenators, int[] denominators) {
@@ -105,8 +107,6 @@ public class TaskEighth {
 			}
 		}
 
-		System.out.println("Sorted and regulated numenator array >> \t" + Arrays.toString(numenators) + "\n");
-		System.out.println("Sorted and regulated denominator array >> \t" + Arrays.toString(denominators) + "\n");
 	}
 
 	public static void checkNumber(Scanner scan) {
