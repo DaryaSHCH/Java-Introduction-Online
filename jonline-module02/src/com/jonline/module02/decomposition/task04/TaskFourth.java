@@ -20,6 +20,7 @@ public class TaskFourth {
 		for (int i = 0; i < arrayX.length; i++) {
 			arrayX[i] = rand.nextInt(10) - 5;
 		}
+
 		int[] arrayY = new int[n];
 
 		for (int i = 0; i < arrayY.length; i++) {
