@@ -8,27 +8,36 @@ import java.util.Scanner;
  */
 public class TaskNinthSecondWay {
 	public static void main(String[] args) {
-		
-		int x; //  5
-		int y; // x,y - стороны образующие угол 90 градусов; 6;
-		
-		int z; 
-		int t;
-		
-		int [] coordinateXY = new int [] {0,0}; // по умолчанию вершина располагается на точках 0,0. 
-		// предположим что х= 5; y =6; координаты
-		
-		int [] coordinateXZ = new int [] {0,5};
-		
-		int coordinateZT; // вершина угла образованная сторонами ZT; 
-		int coodrinateYT;  // 0,6
-		
-		
-		
-		
-		
-		
+
+		int x;
+		int y; // x,y - стороны образующие угол 90 градусов;
+		int[] coordinateXY = new int[] { 0, 0 }; // по умолчанию вершина располагается на точках 0,0.
+
+		System.out.println("Input the length of the sides forming a right angle >> ");
+
+		x = inputNumberToConsole("Input length for side X>>");
+		y = inputNumberToConsole("Input length for side Y>>");
+
+		int[] coordinateYZ = new int[] { 0, y };
+		int[] coordinateTХ = new int[] { 0, x };
+
+		int coordinateZTx;
+		int coordinateZTy;
+
+		System.out.println("coordinates for point ZT >> ");
+
+		coordinateZTx = inputNumberToConsole("Input coordinate for X-axis>>");
+		coordinateZTy = inputNumberToConsole("Input coordinate for Y-axis>>");
+		int[] coordinateZT = new int[] { coordinateZTx, coordinateZTy };
+
+		double z;
+		double t;
+
+		z = findLengthWithCoordinate(coordinateYZ[0], coordinateYZ[1], coordinateZTx, coordinateZTy);
+		t = findLengthWithCoordinate(coordinateZTx, coordinateZTy, coordinateTХ[0], coordinateTХ[1]);
+
 	}
+
 	public static int inputNumberToConsole(String message) {
 		Scanner reader;
 		int number;
@@ -46,6 +55,16 @@ public class TaskNinthSecondWay {
 		} while (number <= 0);
 
 		return number;
+	}
+
+	public static double findLengthWithCoordinate(int x1, int y1, int x2, int y2) {
+
+		double length;
+		int differenceX = x2 - x1;
+		int differenceY = y2 - y1;
+
+		length = Math.sqrt((Math.pow(differenceX, 2) + Math.pow(differenceY, 2)));
+		return length;
 	}
 
 }
