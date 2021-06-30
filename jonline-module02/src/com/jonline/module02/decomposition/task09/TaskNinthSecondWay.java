@@ -11,6 +11,7 @@ public class TaskNinthSecondWay {
 
 		int x;
 		int y; // x,y - стороны образующие угол 90 градусов;
+
 		int[] coordinateXY = new int[] { 0, 0 }; // по умолчанию вершина располагается на точках 0,0.
 
 		System.out.println("Input the length of the sides forming a right angle >> ");
@@ -28,6 +29,7 @@ public class TaskNinthSecondWay {
 
 		coordinateZTx = inputNumberToConsole("Input coordinate for X-axis>>");
 		coordinateZTy = inputNumberToConsole("Input coordinate for Y-axis>>");
+
 		int[] coordinateZT = new int[] { coordinateZTx, coordinateZTy };
 
 		double z;
@@ -37,11 +39,32 @@ public class TaskNinthSecondWay {
 		t = findLengthWithCoordinate(coordinateZTx, coordinateZTy, coordinateTХ[0], coordinateTХ[1]);
 
 		double lengthYZTX;
+
 		lengthYZTX = findLengthWithCoordinate(coordinateYZ[0], coordinateYZ[1], coordinateTХ[0], coordinateTХ[1]);
 
 		double areaСonvexQuadrangle;
 
-		areaСonvexQuadrangle = findAreaTriangle(x, y, lengthYZTX) + findAreaTriangle(z, t, lengthYZTX);
+		double lengthXYZT;
+
+		lengthXYZT = findLengthWithCoordinate(coordinateXY[0], coordinateXY[1], coordinateZT[0], coordinateZT[1]);
+
+		double areaСoncaveQuadrangle;
+
+		boolean typeQuadrangl;
+		typeQuadrangl = findTypeQuadrangl(coordinateZT[0], coordinateTХ[0], coordinateZT[1], coordinateTХ[1],
+				coordinateYZ[0], coordinateYZ[1]);
+
+		if (typeQuadrangl = true) {
+
+			System.out.println("This Quadrangle is Сoncave");
+
+			areaСoncaveQuadrangle = findAreaTriangle(x, t, lengthXYZT) + findAreaTriangle(y, z, lengthXYZT);
+			System.out.println("Area This Quadrangle is " + areaСoncaveQuadrangle);
+		} else {
+			System.out.println("This Quadrangle is Сonvex");
+			areaСonvexQuadrangle = findAreaTriangle(x, y, lengthYZTX) + findAreaTriangle(z, t, lengthYZTX);
+			System.out.println("Area This Quadrangle is " + areaСonvexQuadrangle);
+		}
 
 	}
 
@@ -74,16 +97,22 @@ public class TaskNinthSecondWay {
 		return length;
 	}
 
-	public static double findAreaTriangle(double cathetusA, double cathetusB, double hypotenuseAB) {
+	public static double findAreaTriangle(double sideA, double sideB, double sideC) {
 
 		double semiPerimeter;
 		double s;
 
-		semiPerimeter = (cathetusA + cathetusB + hypotenuseAB) / 2;
-		s = Math.sqrt(semiPerimeter * (semiPerimeter - cathetusA) * (semiPerimeter - cathetusB)
-				* (semiPerimeter - hypotenuseAB));
+		semiPerimeter = (sideA + sideB + sideC) / 2;
+		s = Math.sqrt(semiPerimeter * (semiPerimeter - sideA) * (semiPerimeter - sideB) * (semiPerimeter - sideC));
 
 		return s;
+	}
+
+	public static boolean findTypeQuadrangl(int coordinateX1, int coordinateX2, int coordinateY1, int coordinateY2, int coordinateX3, int coordinateY3) {
+		boolean СoncaveQuadrangl = ( ((coordinateX1 != coordinateX2)  && (coordinateY1 != coordinateY2) ||
+				
+				((coordinateX1 != coordinateX3) && (coordinateY1!= coordinateY3)) );
+		return СoncaveQuadrangl;  
 	}
 
 }
