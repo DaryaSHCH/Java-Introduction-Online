@@ -36,6 +36,13 @@ public class TaskNinthSecondWay {
 		z = findLengthWithCoordinate(coordinateYZ[0], coordinateYZ[1], coordinateZTx, coordinateZTy);
 		t = findLengthWithCoordinate(coordinateZTx, coordinateZTy, coordinateTХ[0], coordinateTХ[1]);
 
+		double lengthYZTX;
+		lengthYZTX = findLengthWithCoordinate(coordinateYZ[0], coordinateYZ[1], coordinateTХ[0], coordinateTХ[1]);
+
+		double areaСonvexQuadrangle;
+
+		areaСonvexQuadrangle = findAreaTriangle(x, y, lengthYZTX) + findAreaTriangle(z, t, lengthYZTX);
+
 	}
 
 	public static int inputNumberToConsole(String message) {
@@ -65,6 +72,18 @@ public class TaskNinthSecondWay {
 
 		length = Math.sqrt((Math.pow(differenceX, 2) + Math.pow(differenceY, 2)));
 		return length;
+	}
+
+	public static double findAreaTriangle(double cathetusA, double cathetusB, double hypotenuseAB) {
+
+		double semiPerimeter;
+		double s;
+
+		semiPerimeter = (cathetusA + cathetusB + hypotenuseAB) / 2;
+		s = Math.sqrt(semiPerimeter * (semiPerimeter - cathetusA) * (semiPerimeter - cathetusB)
+				* (semiPerimeter - hypotenuseAB));
+
+		return s;
 	}
 
 }
