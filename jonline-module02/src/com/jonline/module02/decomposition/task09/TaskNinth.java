@@ -53,8 +53,8 @@ public class TaskNinth {
 		return Math.sqrt(Math.pow(cathetusA, 2) + Math.pow(cathetusB, 2));
 	}
 
-	public static double findAreaTriangle(double cathetusA, double cathetusB, double hypotenuseAB) { // по формуле
-																										// Герона
+	public static double findAreaTriangle(double cathetusA, double cathetusB, double hypotenuseAB) {
+
 		double semiPerimeter;
 		double s;
 
