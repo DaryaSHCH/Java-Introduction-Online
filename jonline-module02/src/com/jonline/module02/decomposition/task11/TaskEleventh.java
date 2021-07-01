@@ -11,8 +11,8 @@ public class TaskEleventh {
 		int first;
 		int second;
 
-		first = inputNumberToConsole("Input first integer more then 0 >>");
-		second = inputNumberToConsole("Input second integer more then 0 >>");
+		first = inputNumberToConsole(" first integer more then 0 >>");
+		second = inputNumberToConsole(" second integer more then 0 >>");
 
 		int[] arrayFirst = splitToArray(first);
 		int[] arraySecond = splitToArray(second);
