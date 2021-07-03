@@ -1,6 +1,7 @@
 package com.jonline.module02.decomposition.task12;
 
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 /*
@@ -30,7 +31,23 @@ public static void main(String[] args) {
      
     // System.out.println(Arrays.toString(arrayK));
 	
-	int lengthArray = 10; 
+	int lengthInitialArray = 40; 
+	
+	int [] initialArray = new int[lengthInitialArray];
+	
+	Random randomIntegers = new Random();
+	
+	for (int i = 0; i <initialArray.length; i++) {
+		initialArray[i] = randomIntegers.nextInt(k * 2);
+	}
+	
+	System.out.println(Arrays.toString(initialArray));
+	
+	for (int i = 0; i <initialArray.length; i++) {
+		String [] digitsFromInitialArrayElements = Integer.toString(initialArray[i]).split("");	
+		System.out.println(Arrays.toString());
+	}
+	
 	
 	int sumElemArray = 0; 
 	
