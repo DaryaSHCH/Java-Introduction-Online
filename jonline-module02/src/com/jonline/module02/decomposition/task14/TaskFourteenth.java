@@ -68,9 +68,21 @@ public class TaskFourteenth {
 
 	}
 	
-	public static int searchNumber(int x, int length) {
-        return (int) Math.pow(x, length);
+	public static int searchNumber(int number, int length) {
+        return (int) Math.pow(number, length);
 
     }
+	
+	public static int findNumberArmstrong(int number) {
+		int numberArmstrong = 0; 
+		int [] digitsArray = splitNumberToArray(number);
+		 for (int i = 0; i < digitsArray.length; i++) {
+			 numberArmstrong += searchNumber(digitsArray[i], digitsArray.length);
+			 if ( numberArmstrong == number) {
+				 return numberArmstrong; 
+			 }
+		 }
+		
+	}
 
 }
