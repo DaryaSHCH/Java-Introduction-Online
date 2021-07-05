@@ -1,7 +1,6 @@
 package com.jonline.module02.decomposition.task12;
 
 import java.util.Arrays;
-import java.util.Random;
 import java.util.Scanner;
 
 /*
@@ -20,8 +19,6 @@ public class TaskTwelth {
 
 		int arrayLength = findArrayLength(k, n);
 		createFinalArray(k, n, arrayLength);
-
-
 
 	}
 
