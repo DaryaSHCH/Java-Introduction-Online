@@ -9,88 +9,85 @@ import java.util.Scanner;
 являются числа, сумма цифр которых равна К и которые не больше N.
  */
 public class TaskTwelth {
-public static void main(String[] args) {
-	
-	int k;
-	int n; 
-	
-	k = inputNumberToConsole("integer K >>");
-	
-	n = inputNumberToConsole("integer N >>");
-	
-	//String[] digitsFromK = Integer.toString(k).split("");
-	
-	//System.out.println(Arrays.toString(digitsFromK));
-	
-	 //int sizeStringK = digitsFromK.length;
-     
-	 //int [] arrayK = new int [sizeStringK];
-     //for(int i=0; i<sizeStringK; i++) {
-       // arrayK[i] = Integer.parseInt(digitsFromK[i]);
-     //}
-     
-    // System.out.println(Arrays.toString(arrayK));
-	
-	int lengthInitialArray = 40; 
-	
-	int [] initialArray = new int[lengthInitialArray];
-	
-	Random randomIntegers = new Random();
-	
-	for (int i = 0; i <initialArray.length; i++) {
-		initialArray[i] = randomIntegers.nextInt(k * 2);
+	public static void main(String[] args) {
+
+		int k;
+		int n;
+
+		k = inputNumberToConsole("integer K >>");
+
+		n = inputNumberToConsole("integer N >>");
+
+		int arrayLength = findArrayLength(k, n);
+		createFinalArray(k, n, arrayLength);
+
+
+
 	}
-	
-	System.out.println(Arrays.toString(initialArray));
-	
-	for (int i = 0; i <initialArray.length; i++) {
-		String [] digitsFromInitialArrayElements = Integer.toString(initialArray[i]).split("");	
-		System.out.println(Arrays.toString());
+
+	public static int inputNumberToConsole(String message) {
+		Scanner reader;
+		int number;
+
+		reader = new Scanner(System.in);
+
+		do {
+			System.out.println("Input " + message);
+
+			while (!reader.hasNextInt()) {
+				System.out.println("Input integer>>");
+				reader.next();
+			}
+			number = reader.nextInt();
+		} while (number <= 0);
+
+		return number;
 	}
-	
-	
-	int sumElemArray = 0; 
-	
-	
-	int [] arrayA = new int [lengthArray];
-	
-	for (int i = 0; i < arrayA.length; i++) {
-		sumElemArray = k;
-		
-		arrayA[i] = k - i;
-		
-		if (arrayA[i] > n) {
-			
+
+	public static int findArrayLength(int k, int n) {
+		int counter = 0;
+		int buff;
+		int sum;
+
+		for (int i = 0; i < n; i++) {
+			buff = i;
+			sum = 0;
+
+			while (buff < 0) {
+				sum += buff % 10;
+				buff /= 10;
+			}
+			if (sum == k) {
+				counter++;
+			}
+
 		}
-		
-		
+		return counter;
+
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-}
-public static int inputNumberToConsole(String message) {
-	Scanner reader;
-	int number;
 
-	reader = new Scanner(System.in);
+	public static int[][] formNumbers(int k, int n) {
 
-	do {
-		System.out.println("Input " + message);
+		int[][] arrayMultidimensional = new int[2][k - 1];
 
-		while (!reader.hasNextInt()) {
-			System.out.println("Input integer>>");
-			reader.next();
+		for (int i = 1, j = k - 1; i < k; i++, j--) {
+
+			arrayMultidimensional[0][i - 1] = i;
+			arrayMultidimensional[1][i - 1] = j;
 		}
-		number = reader.nextInt();
-	} while (number <= 0);
+		return arrayMultidimensional;
+	}
 
-	return number;
-}
+	public static int[] createFinalArray(int k, int n, int arrayLength) {
+		int[] array = new int[arrayLength];
+		int[][] sourceNumbers = formNumbers(k, n);
+		System.out.println(Arrays.deepToString(sourceNumbers));
+		int counter = 0;
+		while (counter != array.length) {
+
+		}
+
+		return array;
+	}
 
 }
