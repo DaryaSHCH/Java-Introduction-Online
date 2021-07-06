@@ -12,14 +12,15 @@ public class TaskFourteenth {
 	public static void main(String[] args) {
 
 		int k;
-		int power;
 
 		k = inputNumberToConsole(" K>>");
-		power = inputNumberToConsole(" power >>");
 
 		int[] arrayBeforeArmstrong = createArrayAllNumbers(k);
+		System.out.println("Числа армстронга");
+		for (int i = 0; i < arrayBeforeArmstrong.length; i++) {
+			findAndPrintNumberArmstrong(arrayBeforeArmstrong[i]);
 
-		System.out.println(Arrays.toString(arrayBeforeArmstrong));
+		}
 
 	}
 
@@ -54,35 +55,36 @@ public class TaskFourteenth {
 		return array;
 	}
 
-	public static int[] splitNumberToArray(int number) {
-		int arraySize;
-		arraySize = number /= 10;
-		int[] arrayDigits = new int[arraySize];
-		for (int i = 0; i < arrayDigits.length; i++) {
-			while (number > 0) {
-				arrayDigits[i] = number % 10;
-				number /= 10;
-			}
+	public static int[] splitNumberToArray(int numberFromArrayBeforeArmstrong) {
+		char[] arrayDigitChar = ("" + numberFromArrayBeforeArmstrong).toCharArray();
+
+		int[] digits = new int[arrayDigitChar.length];
+		for (int i = 0; i < digits.length; i++) {
+			digits[i] = arrayDigitChar[i] - '0';
 		}
-		return arrayDigits;
+
+		return digits;
 
 	}
-	
-	public static int searchNumber(int number, int length) {
-        return (int) Math.pow(number, length);
 
-    }
-	
-	public static int findNumberArmstrong(int number) {
-		int numberArmstrong = 0; 
-		int [] digitsArray = splitNumberToArray(number);
-		 for (int i = 0; i < digitsArray.length; i++) {
-			 numberArmstrong += searchNumber(digitsArray[i], digitsArray.length);
-			 if ( numberArmstrong == number) {
-				 return numberArmstrong; 
-			 }
-		 }
-		
+	public static int searchNumber(int number, int length) {
+		return (int) Math.pow(number, length);
+
+	}
+
+	public static void findAndPrintNumberArmstrong(int elementArray) {
+		int numberArmstrong = 0;
+		int checkedNumberArmstrong = 0;
+		int[] digitsArray = splitNumberToArray(elementArray);
+		for (int i = 0; i < digitsArray.length; i++) {
+			numberArmstrong += searchNumber(digitsArray[i], digitsArray.length);
+			if (numberArmstrong == elementArray) {
+				checkedNumberArmstrong = elementArray;
+				System.out.print(checkedNumberArmstrong + "/ ");
+			} else {
+				System.out.print("");
+			}
+		}
 	}
 
 }
