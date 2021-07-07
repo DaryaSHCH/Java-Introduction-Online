@@ -110,7 +110,6 @@ public class TaskNinthSecondWay {
 
 	public static boolean findTypeQuadrangl(int coordinateX1, int coordinateX2, int coordinateY1, int coordinateY2, int coordinateX3, int coordinateY3) {
 		boolean СoncaveQuadrangl = ( ((coordinateX1 !=  coordinateX2)  && (coordinateY1 != coordinateY2) ||
-				
 				((coordinateX1 != coordinateX3) && (coordinateY1 != coordinateY3)) ));
 		return СoncaveQuadrangl;  
 	}
