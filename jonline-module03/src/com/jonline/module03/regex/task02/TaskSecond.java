@@ -25,54 +25,50 @@ import java.util.regex.Pattern;
  */
 public class TaskSecond {
 	public static void main(String[] args) {
-		String analyzedXML;
+		
 		String xmlDoc = "<notes>\n" + "<note id = \"1\">\n" + "<to>Вася</to>\n" + "<from>Света</from>\n"
 				+ "<from>Света</from>\n" + "<heading>Напоминание</heading>\n" + "<body>Позвони мне завтра!</body>\n"
 				+ "</note>\n" + "<note id = \"2\">\n" + "<to>Петя</to>\n" + "<from>Маша</from>\n"
 				+ "<heading>Важное напоминание</heading>\n" + "<body/>\n" + "</note>\n" + "</notes>\n";
 
-		// System.out.println(xmlDoc);
+		final Pattern tagPattern = Pattern.compile("<(.[^(><.)]+)>");
+		final Matcher testMatcher = tagPattern.matcher(xmlDoc);
 
-		analyzedXML = analyzeXML(xmlDoc);
-		System.out.println(analyzedXML);
-	}
+		final Pattern tagTypePattern = Pattern.compile("(^/.*)|(^.*/)");
 
-	public static String analyzeXML(String xml) {
-		StringBuffer strBuff = new StringBuffer();
+		while (testMatcher.find()) {
+			final String tagNameWithAttributes = testMatcher.group(1);
+			final int tagNameEndIndex = tagNameWithAttributes.indexOf(" ");
 
-		Pattern openTagPattern = Pattern.compile("<\\w.+?>");
-		Pattern closeTagPattern = Pattern.compile("</\\w.+>");
-		Pattern bodyTagPattern = Pattern.compile(">.+?<");
-		Pattern hollowTagPattern = Pattern.compile("<\\w.+?/>");
-
-		String[] strings = xml.split("\n");
-		
-		for (String strElement : strings) {
-			
-			Matcher openTagMatcher = openTagPattern.matcher(strElement);
-			Matcher closeTagMatcher = closeTagPattern.matcher(strElement);
-			Matcher bodyTagMatcher = bodyTagPattern.matcher(strElement);
-			Matcher hollowTagMatcher = hollowTagPattern.matcher(strElement);
-
-			if (openTagMatcher.matches()) {
-				strBuff.append(openTagMatcher.group());
-				strBuff.append(" - OPENING TAG \n");
+			final String tagName;
+			if (tagNameEndIndex == -1) {
+				tagName = tagNameWithAttributes;
+			} else {
+				tagName = tagNameWithAttributes.substring(0, tagNameEndIndex);
 			}
-			if (closeTagMatcher.matches()) {
-				strBuff.append(closeTagMatcher.group());
-				strBuff.append(" - CLOSING TAG \n");
+
+			System.out.println(testMatcher.group(0) + "; name = " + tagName);
+
+			final Matcher tagTypeMatcher = tagTypePattern.matcher(tagName);
+
+			if (tagTypeMatcher.find()) {
+				if (tagTypeMatcher.group(1) != null) {
+					System.out.println("closing");
+				} else if (tagTypeMatcher.group(2) != null) {
+					System.out.println("empty");
+				}
+			} else {
+				System.out.println("opening");
+
+				final int tagEndIndex = testMatcher.end();
+				final int contentEndIndex = xmlDoc.indexOf("</" + tagName + ">", tagEndIndex);
+
+				System.out.println(xmlDoc.substring(tagEndIndex, contentEndIndex));
 			}
-			if (bodyTagMatcher.matches()) {
-				strBuff.append(bodyTagMatcher.group());
-				strBuff.append(" - BODY TAG \n");
-			}
-			if (hollowTagMatcher.matches()) {
-				strBuff.append(hollowTagMatcher.group());
-				strBuff.append(" - TAG WITHOUT BODY \n");
-			}
+
+			System.out.println("--------------------------------");
 		}
 
-		return strBuff.toString();
-
 	}
+
 }
