@@ -7,5 +7,7 @@ package com.jonline.module04.classes.task02;
 public class TaskSecond {
 	public static void main(String[] args) {
 
+		TestSecond test = new TestSecond(25, 27);
+		System.out.println("Test " + test);
 	}
 }
