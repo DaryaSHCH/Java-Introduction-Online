@@ -21,10 +21,13 @@ public class Counter {
 			maximalValue = minimalValue;
 			minimalValue = temporaryVariable;
 		}
-		if (currentValue < minimalValue)
+		if (currentValue < minimalValue) {
 			currentValue = minimalValue;
-		if (currentValue > maximalValue)
+		}
+		if (currentValue > maximalValue) {
 			currentValue = maximalValue;
+		}
+
 	}
 
 	public void setMinimalValue(int minimalValue) {
