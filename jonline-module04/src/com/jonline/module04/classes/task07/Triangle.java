@@ -1,47 +1,105 @@
 package com.jonline.module04.classes.task07;
 
 public class Triangle {
-	private int sideA;
-	private int sideB;
-	private int sideC;
-    
-	public Triangle(int sideA, int sideB, int sideC) {
-		this.sideA = sideA; 
-		this.sideB = sideB;
-		this.sideC = sideC; 
-	}
-	public void setSideA(int sideA) {
-		this.sideA = sideA;
+	private final Point a;
+	private final Point b;
+	private final Point c;
+
+	public Triangle(Point a, Point b, Point c) {
+		this.a = a;
+		this.b = b;
+		this.c = c;
 	}
 
-	public int getSideA() {
-		return this.sideA;
+	public Point getA() {
+		return a;
 	}
 
-	public void setSideB(int sideB) {
-		this.sideB = sideB;
+	public Point getB() {
+		return b;
 	}
 
-	public int getSideB() {
-		return this.sideB;
+	public Point getC() {
+		return c;
 	}
 
-	public void setSideC(int sideC) {
-		this.sideC = sideC;
+	private void checkCoordinates(Point a, Point b, Point c) {
+		if (a == null || b == null || c == null) {
+			System.out.println("Point mustn't be null");
+			throw new IllegalArgumentException();
+		}
+		double sideA = a.findDistanceBetweenPoints(b);
+		double sideB = b.findDistanceBetweenPoints(c);
+		double sideC = a.findDistanceBetweenPoints(c);
+
+		if (sideA * sideB * sideC == 0 || sideA + sideB <= sideC || sideA + sideC <= sideB) {
+			System.out.println("Incorrect coordinates of the vertices of the triangle");
+			throw new IllegalArgumentException();
+		}
 	}
 
-	public int getSideC() {
-		return sideC;
+	public static double getSideAB(Triangle triangle) {
+		return triangle.getA().findDistanceBetweenPoints(triangle.getB());
 	}
-	
-	public int findPerimeter(int sideA, int sideB, int sideC) {
-		return this.sideA + this.sideB + this.sideC; 
+
+	public static double getSideBC(Triangle triangle) {
+		return triangle.getB().findDistanceBetweenPoints(triangle.getC());
 	}
-	
-	public double findArea(int sideA, int sideB, int sideC) {
-		float p; 
-	    p = (this.sideA + this.sideB + this.sideC)/2;
-        return Math.sqrt(p * (p - this.sideA)* (p - this.sideB)*(p - this.sideC));
+
+	public static double getSideAC(Triangle triangle) {
+		return triangle.getB().findDistanceBetweenPoints(triangle.getC());
+	}
+
+	public static double getPerimeter(Triangle triangle) {
+		return getSideAB(triangle) + getSideAC(triangle) + getSideBC(triangle);
+	}
+
+	public static double getArea(Triangle triangle) {
+		double p = getPerimeter(triangle) / 2; // полупериметр;
+		return Math.sqrt(p * (p - getSideAB(triangle)) * (p - getSideBC(triangle)) * (p - getSideAC(triangle)));
+	}
+
+	@Override
+	public int hashCode() {
+		int result = a != null ? a.hashCode() : 0;
+		result = 31 * result + (b != null ? b.hashCode() : 0);
+		result = 31 * result + (c != null ? c.hashCode() : 0);
+		return result;
+	}
+
+	public static Point getMedianIntersectionPoint(Triangle triangle) {
+		Point point;
+		double xABC = (triangle.getA().getX() + triangle.getB().getX() + triangle.getC().getX()) / 3;
+		double yABC = (triangle.getA().getY() + triangle.getB().getY() + triangle.getC().getY()) / 3;
+		point = new Point(xABC, yABC);
+		return point;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null || getClass() != obj.getClass()) {
+			return false;
+		}
+
+		Triangle triangle = (Triangle) obj;
+
+		if (a != null ? !a.equals(triangle.a) : triangle.a != null) {
+			return false;
+		}
+		if (b != null ? !b.equals(triangle.b) : triangle.b != null) {
+			return false;
+		}
+		return c != null ? c.equals(triangle.c) : triangle.c == null;
+
+	}
+
+	@Override
+	public String toString() {
+		return "Triangle (" + "a = " + a + ", b = " + b + ", c = " + c + ')';
 	}
 
 }
+
