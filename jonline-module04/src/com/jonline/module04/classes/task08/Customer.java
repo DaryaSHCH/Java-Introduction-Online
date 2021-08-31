@@ -12,6 +12,19 @@ public class Customer {
 	private long creditCardNumber;
 	private long bankAccountNumber;
 
+	public Customer(final int id, final String surname, final String name, final String patronymic,
+			final String address, final long creditCardNumber, final long bankAccountNumber) {
+
+		this.id = id;
+		this.surname = surname;
+		this.name = name;
+		this.patronymic = patronymic;
+		this.address = address;
+		this.creditCardNumber = creditCardNumber;
+		this.bankAccountNumber = bankAccountNumber;
+
+	}
+
 	public void setID(int id) {
 		this.id = id;
 	}
